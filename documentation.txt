@@ -11,7 +11,8 @@ Before running the script, ensure that you have the following:
 Script Usage
 
 Step 1: Set Access Token and API Endpoint
-Before making API requests, you need to set your Facebook access token and the API endpoint. Create an app by visiting developers.facebook.com and after getting your access token, modify the following variables in the script:
+Before making API requests, you need to set your Facebook access token and the API endpoint. Create an app by visiting developers.facebook.com,
+then open Graph_API_Explorer where you can add permissions and generate your access token. After getting your access token, modify the following variables in the script:
 
 
 access_token = 'YOUR_ACCESS_TOKEN'
