@@ -1,0 +1,43 @@
+Overview
+This script allows you to retrieve public posts and comments from a Facebook page using the Facebook Graph API. It provides functions to make API requests, fetch public posts from a page, and retrieve comments for a given post.
+
+Prerequisites
+Before running the script, ensure that you have the following:
+
+- Python installed on your system.
+- The 'requests' library installed. You can install it using the command 'pip install requests'.
+- An access token from Facebook's API, which grants permission to access the desired page's data.
+
+Script Usage
+
+Step 1: Set Access Token and API Endpoint
+Before making API requests, you need to set your Facebook access token and the API endpoint. Create an app by visiting developers.facebook.com and after getting your access token, modify the following variables in the script:
+
+
+access_token = 'YOUR_ACCESS_TOKEN'
+api_endpoint = 'https://graph.facebook.com/v16.0/'
+
+Step 2: Fetch Public Posts from a Facebook Page
+To retrieve public posts from a Facebook page, use the 'get_public_posts(page_id)' function. Provide the desired Facebook page ID as a parameter.
+
+page_id = 'PAGE_ID'  # Replace with the desired Facebook page ID
+get_public_posts(page_id)
+
+The function will make an API request to fetch the public posts and print each post's details. If successful, the script will display the post information. Otherwise, it will show a failure message.
+
+Step3- 'get_post_comments(post_id)' function will retrieve comments from a post when the post id is given. If unsuccessful, it will show a failure message.  
+
+Step 4: Fetch Comments for Each Post
+If you want to fetch and print comments for each post, uncomment the following lines in the script:
+
+# posts = get_public_posts(page_id)
+# for post in posts:
+#     post_id = post['id']
+#     get_post_comments(post_id)
+
+This will call the 'get_post_comments(post_id)' function for each post and retrieve the associated comments. It will print each comment's details. Note that you need to fetch the posts first using 'get_public_posts(page_id)'.
+
+
+
+
+
